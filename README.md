@@ -8,7 +8,22 @@ Developed by **Rampart** | [KineticRuins.com](https://kineticruins.com)
 A collection of five custom ComfyUI nodes designed to simplify wildcard batch generation, display selected wildcard values, save images and videos with flexible filenames, and monitor rendering progress.
 
 ---
+## 📚 Illustrated User Guides
 
+Explore our complete step-by-step guides featuring screenshots, configuration instructions, examples, and troubleshooting.
+
+**[📖 Open the Complete KRuins User Guide](docs/USER-GUIDE.md)**
+
+### Individual Node Guides
+
+1. [KRuins — Wildcard Batch](docs/WILDCARD-BATCH.md)
+2. [KRuins — Show Text](docs/SHOW-TEXT.md)
+3. [KRuins — Save Image](docs/SAVE-IMAGE.md)
+4. [KRuins — Render ETA](docs/RENDER-ETA.md)
+5. [KRuins — Save Video](docs/SAVE-VIDEO.md)
+
+Each guide includes screenshots of the actual nodes, explanations of their controls, and practical workflow examples.
+---
 ## Included Nodes
 
 ### 1. KRuins - Wildcard Batch
