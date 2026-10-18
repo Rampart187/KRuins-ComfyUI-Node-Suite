@@ -1,0 +1,269 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KRuins PBC | Illustrated Guide</title><style>body{margin:0;background:#0b1220;color:#e9f1ff;font:16px/1.7 system-ui,Segoe UI,sans-serif}a{color:#6bb4ff}header{background:#080d17;border-bottom:1px solid #273750;padding:14px 24px;position:sticky;top:0;z-index:10}header a{margin-right:22px;font-weight:700}main{max-width:1120px;margin:auto;padding:30px 24px}h1,h2,h3{line-height:1.3;color:#f2f8ff}h1{font-size:2.2rem}h2{border-bottom:1px solid #273750;padding-top:22px;padding-bottom:12px}p,li{color:#d2def0}pre{background:#111c2d;padding:16px;overflow:auto;border:1px solid #273750;border-radius:10px}code{color:#6ee7ba}main>img.banner{width:100%;border-radius:14px;border:1px solid #273750}.shot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.shot-grid figure{margin:0;background:#111c2d;border:1px solid #273750;border-radius:12px;padding:10px}.shot-grid img{width:100%;height:auto;max-height:480px;object-fit:contain}.shot-grid figcaption{text-align:center;color:#b6c7df;font-size:13px;padding:8px}@media(max-width:700px){.shot-grid{grid-template-columns:1fr}main{padding:16px}header a{display:inline-block;margin-right:10px}}</style></head><body><header><a href="../index.html#nodes">← KRuins Resource Center</a><a href="#screenshots">50 Screenshots</a><a href="https://github.com/Rampart187/KRuins-PBC">GitHub</a><a href="https://registry.comfy.org/nodes/kruins-pbc">Registry</a></header><main><img class="banner" src="../screenshots/pbc/pbc-banner.png" alt="KRuins Prompt Building Companion promotional banner"><h1>KRuins Prompt Building Companion (PBC) | Free ComfyUI Custom Node</h1>
+<p><strong>Build Better Prompts. Organize Your Wildcards. Create Without Limits.</strong></p>
+<p>Welcome to the <strong>KRuins Prompt Building Companion (PBC)</strong>, a free custom ComfyUI node designed to simplify prompt creation, wildcard management, and reusable prompt presets, all from one convenient interface.</p>
+<p>No more constantly switching between text editors, digging through wildcard folders, or manually copying the same prompts into your workflows.</p>
+<p>With PBC, you can build prompts, manage your wildcard files, organize directories, import complete wildcard packs, and save your favorite prompts for instant reuse.</p>
+<p><strong>Create, edit, organize, and manage everything directly from PBC!</strong></p>
+<hr />
+<h2>What Is the Prompt Building Companion?</h2>
+<p>PBC is a three-in-one prompt management tool featuring three dedicated tabs:</p>
+<p><strong>KEYWORDS:</strong> Quickly build prompts using customizable keyword buttons.</p>
+<p><strong>WILD CARDS:</strong> Browse, search, create, edit, delete, and import wildcard files without leaving ComfyUI.</p>
+<p><strong>PROMPTING:</strong> Create and save complete prompts as reusable presets, then insert them into your text encoder with a single click.</p>
+<p>All three features work together to make prompt creation faster, easier, and more organized.</p>
+<h3>Key Features</h3>
+<ul>
+<li>Customizable keyword buttons</li>
+<li>One-click keyword insertion</li>
+<li>Wildcard folder browsing and searching</li>
+<li>Direct wildcard TXT file editing</li>
+<li>Create and delete wildcard files</li>
+<li>Create, rename, and delete subdirectories</li>
+<li>Smart folder renaming with automatic wildcard reference updates</li>
+<li>Import individual TXT wildcard files</li>
+<li><strong>One-click ZIP wildcard pack importing</strong></li>
+<li>Automatic wildcard directory and folder creation</li>
+<li>Refresh and change detection</li>
+<li>Unlimited-length prompt presets</li>
+<li>Import complete prompts from TXT files</li>
+<li>Edit and delete saved prompt presets</li>
+<li>Target text encoder selection</li>
+<li>Undo and Copy controls</li>
+<li>Persistent saved presets and settings</li>
+</ul>
+<hr />
+<h2>Compatibility and Supported Nodes</h2>
+<p>PBC is designed to work with ComfyUI text encoders and compatible wildcard-processing nodes.</p>
+<p>It can be used with standard text prompt inputs, wildcard text encoders, wildcard resolvers, and other compatible nodes that accept prompt text.</p>
+<p><strong>PBC was specifically developed and tested to work with the KRuins Wildcard Batch and KRuins Show Text nodes.</strong></p>
+<p>These nodes provide a convenient workflow for inserting prompts, resolving wildcard references, and viewing the resulting text.</p>
+<p><strong>Important:</strong> PBC is a prompt-building and management companion. Wildcard expansion is performed by the compatible wildcard-processing node used in your workflow. Compatibility with third-party nodes depends on their supported text input and wildcard syntax.</p>
+<hr />
+<h2>Getting Started: Selecting Your Target</h2>
+<p>Before inserting keywords, wildcards, or prompt presets, select the text encoder or compatible prompt input you want PBC to control.</p>
+<p>Once selected, the target node's name appears in the bottom target button.</p>
+<p>You can then insert text directly into the selected target.</p>
+<p>Use <strong>Clear Target</strong> to disconnect the current target and choose another.</p>
+<hr />
+<h2>Understanding PBC's Two Operating Modes</h2>
+<p>PBC has two operating modes, clearly identified by the status banner at the top of the interface.</p>
+<h3>PROMPT READY (Green)</h3>
+<p>This is the normal operating mode.</p>
+<p>Use it to select keyword buttons, insert wildcard references, and load saved prompt presets into your target text encoder.</p>
+<h3>EDIT MODE (Red)</h3>
+<p>Edit Mode unlocks PBC's management features.</p>
+<p>You can add or delete keywords, create and modify wildcard files, import files, manage folders, and create or edit prompt presets.</p>
+<p>Click <strong>Edit</strong> to enter Edit Mode.</p>
+<p>When finished, click <strong>Save</strong> to exit Edit Mode and return to Prompt Ready.</p>
+<hr />
+<h1>1. KEYWORDS: Build Prompts Faster</h1>
+<p>The Keywords tab provides a collection of clickable prompt keywords, including photography styles, camera angles, lighting, lenses, and other useful descriptors.</p>
+<p>PBC includes starter keywords that you can customize to fit your own workflows.</p>
+<h3>Insert Keywords Into Your Prompt</h3>
+<p>Select your target text encoder, then click the keywords you want to use.</p>
+<p>PBC inserts the selected text into your target prompt.</p>
+<p>This is especially useful for quickly assembling photographic descriptions, cinematic styles, camera settings, and other frequently used prompt elements.</p>
+<h3>Undo Keyword Changes</h3>
+<p>Made a mistake or want to reverse your latest insertion?</p>
+<p>Use <strong>Undo</strong> to restore the previous prompt state.</p>
+<h3>Add Your Own Keywords</h3>
+<ol>
+<li>Click <strong>Edit</strong>.</li>
+<li>Enter a new keyword in the Add Keyword field.</li>
+<li>Click <strong>Add</strong>.</li>
+<li>Your new keyword appears as a button.</li>
+<li>Click <strong>Save</strong> when finished editing.</li>
+</ol>
+<h3>Delete Keywords</h3>
+<p>In Edit Mode, select the keyword buttons you want to remove.</p>
+<p>Selected keywords are highlighted, and the <strong>Delete Selected</strong> counter displays how many are selected.</p>
+<p>Click Delete Selected and confirm the operation.</p>
+<p>Your keyword collection can grow and change with your creative workflow.</p>
+<hr />
+<h1>2. WILD CARDS: Complete Wildcard Management</h1>
+<p>The Wild Cards tab is one of PBC's most powerful features.</p>
+<p>Instead of manually opening and editing TXT files in Windows Explorer, you can manage your wildcard library directly inside ComfyUI.</p>
+<h2>Browse Your Wildcard Directory</h2>
+<p>PBC displays your wildcard root directory, available subfolders, and wildcard files.</p>
+<p>Click any subfolder to browse its contents.</p>
+<p>Use <strong>Root</strong> to return to the main wildcard directory.</p>
+<h3>Insert Wildcard References</h3>
+<p>Click a wildcard button to insert its reference into your selected text encoder.</p>
+<p>For example:</p>
+<p><code>__appearance/KR_expression__</code></p>
+<p>This reference can then be processed by your compatible wildcard resolver.</p>
+<h3>Find Wildcards Quickly</h3>
+<p>Use the Find Wildcard search field to locate files throughout your wildcard directory.</p>
+<p>Search by filename, and PBC displays matching results along with their folder locations.</p>
+<hr />
+<h2>Create Your Own Wildcard Files</h2>
+<p>Enter Edit Mode to create new wildcard TXT files directly from PBC.</p>
+<p>To create a wildcard:</p>
+<ol>
+<li>Navigate to the folder where you want to create it.</li>
+<li>Enter the new wildcard filename.</li>
+<li>Enter the wildcard values, one per line.</li>
+<li>Click <strong>Create Wildcard</strong>.</li>
+</ol>
+<p><strong>You can create wildcards in the root directory, any existing subfolder, or a nested subfolder.</strong></p>
+<p>For example:</p>
+<pre><code>wildcards/KR_example.txt
+wildcards/appearance/KR_example.txt
+wildcards/movie/horror/KR_example.txt
+</code></pre>
+<p>The wildcard is created in the directory you currently have selected.</p>
+<h3>Edit Existing Wildcards</h3>
+<p>Select an existing wildcard while in Edit Mode to open its contents.</p>
+<p>You can add, remove, or modify the values directly in the editor.</p>
+<p>Click <strong>Save Changes</strong> to update the file.</p>
+<h3>Delete Wildcard Files</h3>
+<p>Select the wildcard in Edit Mode and click <strong>Delete File</strong>.</p>
+<p>PBC asks for confirmation before deleting the file.</p>
+<p>Be careful when deleting wildcard files used by existing prompts, as their references may no longer resolve.</p>
+<hr />
+<h1>3. WILDCARD FOLDER MANAGEMENT</h1>
+<p>PBC includes a built-in Subdirectory Manager.</p>
+<p>You can create, rename, and delete wildcard folders without opening Windows Explorer.</p>
+<h3>Create a New Subdirectory</h3>
+<p>Enter a folder name and click <strong>Create</strong>.</p>
+<p>The new folder becomes available in your wildcard directory.</p>
+<h3>Rename Existing Subdirectories</h3>
+<p>Select an existing folder and enter its new name.</p>
+<p>Click <strong>Rename</strong> to begin the operation.</p>
+<h3>Smart Rename: Update Wildcard References</h3>
+<p>One of PBC's most useful management features is its ability to detect wildcard references affected by folder renaming.</p>
+<p>When renaming a folder, PBC can identify matching wildcard references and offer to update them automatically.</p>
+<p>For example, renaming:</p>
+<p><code>country</code> to <code>country_renamed</code></p>
+<p>may require changing references such as:</p>
+<pre><code>__country/KR_example__
+</code></pre>
+<p>to:</p>
+<pre><code>__country_renamed/KR_example__
+</code></pre>
+<p>PBC provides options to update matching references, rename the folder without updating references, or cancel.</p>
+<p>It also displays the number of matching references and the files containing them.</p>
+<p>This helps prevent broken wildcard references when reorganizing large collections.</p>
+<h3>Delete Subdirectories</h3>
+<p>Select the folder and click <strong>Delete</strong>.</p>
+<p>PBC displays a confirmation showing how many files and subfolders will be permanently deleted.</p>
+<p><strong>Warning:</strong> Deleting a folder also deletes its contents. This operation cannot be undone.</p>
+<hr />
+<h1>4. IMPORT WILDCARDS: TXT OR ZIP</h1>
+<p>PBC supports two wildcard import methods.</p>
+<h2>Import Individual TXT Files</h2>
+<p>Select the directory where you want the file imported.</p>
+<p>Enter Edit Mode, click <strong>Choose Files</strong>, select your TXT wildcard file, and click <strong>Import</strong>.</p>
+<p>The file is imported into the currently selected wildcard location.</p>
+<h2>One-Click ZIP Wildcard Pack Import</h2>
+<p>Have an entire collection of wildcards?</p>
+<p>Import the ZIP file directly into PBC.</p>
+<p>There is no need to manually extract the archive or recreate its folder structure.</p>
+<p>PBC can automatically create the missing wildcard root directory and extract the folders and TXT files from the archive.</p>
+<p>This makes installing new wildcard packs significantly easier, especially for beginners.</p>
+<h3>Refresh Your Wildcard Library</h3>
+<p>Click <strong>Refresh</strong> after importing files or making changes outside PBC.</p>
+<p>The interface checks for changes and reports newly added or removed wildcard files and folders.</p>
+<p>If nothing has changed, PBC displays <strong>No changes</strong>.</p>
+<h3>Change Your Wildcard Directory</h3>
+<p>Click the yellow folder button beside the directory path to browse for another wildcard location.</p>
+<p>Select your desired folder and use the directory controls to update PBC.</p>
+<hr />
+<h1>5. PROMPTING: Save and Reuse Complete Prompts</h1>
+<p>The Prompting tab allows you to build a personal library of reusable prompt presets.</p>
+<p>Instead of repeatedly typing or pasting the same long prompts, save them once and reuse them whenever needed.</p>
+<h3>Create a New Prompt Preset</h3>
+<ol>
+<li>Click <strong>Edit</strong>.</li>
+<li>Click <strong>Add New Preset</strong>.</li>
+<li>Enter a preset button name, up to 25 characters.</li>
+<li>Paste or type your full prompt.</li>
+<li>Click <strong>Save Prompt</strong>.</li>
+</ol>
+<p>The prompt editor has no preset character-length limit, allowing you to store detailed prompts containing many wildcard references.</p>
+<h3>Insert a Saved Prompt</h3>
+<p>Return to Prompt Ready and click your saved preset button.</p>
+<p>PBC inserts the saved prompt into your selected target.</p>
+<h3>Edit Existing Presets</h3>
+<p>Enter Edit Mode and select an existing preset.</p>
+<p>You can modify its name or prompt contents.</p>
+<p>Click <strong>Save Prompt</strong> to save your changes.</p>
+<h3>Import Prompt Presets From TXT</h3>
+<p>You can also import a complete prompt from a TXT file.</p>
+<p>Click <strong>Import TXT</strong> and select the file containing your prompt.</p>
+<p>PBC creates a new preset using the imported prompt text and a button name derived from the filename.</p>
+<p>This makes sharing and installing prompt presets convenient.</p>
+<h3>Delete Saved Presets</h3>
+<p>Select a preset in Edit Mode and click <strong>Delete Selected</strong>.</p>
+<p>Confirm the deletion to remove the preset.</p>
+<p><strong>Important:</strong> The Save Prompt and Import TXT controls remain visible outside the scrolling editor area, so you can access them even when working with long prompts.</p>
+<hr />
+<h1>6. REAL-WORLD WORKFLOW EXAMPLE</h1>
+<p>Here's an example of PBC working with the KRuins Wildcard Batch and Show Text nodes.</p>
+<p>A saved horror movie prompt can include wildcard references for a character's appearance, clothing, environment, expression, title, and tagline.</p>
+<p>For example:</p>
+<pre><code>Professional photorealistic horror movie poster.
+
+AMY is a beautiful __appearance/KR_age__
+__appearance/KR_ethnicity__ woman with
+__appearance/KR_eye_color__ eyes.
+
+Wearing __movie/horror/KR_clothing__.
+
+__movie/horror/KR_scene__.
+
+Movie title: &quot;__movie/horror/KR_title__&quot;
+
+Tagline: &quot;__movie/horror/KR_tagline__&quot;
+</code></pre>
+<p>PBC inserts the saved prompt into the selected text encoder.</p>
+<p>KRuins Wildcard Batch then processes the wildcard references when the workflow runs, while KRuins Show Text can display the resulting resolved text.</p>
+<p>This provides a straightforward way to create variations without rewriting your prompt every time.</p>
+<hr />
+<h1>7. INSTALLATION</h1>
+<h3>Install KRuins Prompt Building Companion</h3>
+<p><strong>GitHub Repository:</strong> <a href="https://github.com/Rampart187/KRuins-PBC">https://github.com/Rampart187/KRuins-PBC</a></p>
+<p><strong>ComfyUI Manager Listing:</strong> <a href="https://registry.comfy.org/nodes/kruins-pbc">https://registry.comfy.org/nodes/kruins-pbc</a></p>
+<p>Download the KRuins PBC repository and install it in your ComfyUI <code>custom_nodes</code> directory, following the instructions in the repository README.</p>
+<p>Restart ComfyUI after installation.</p>
+<p>Search for <strong>KRuins Prompt Building Companion</strong> in the ComfyUI node menu and add it to your workflow.</p>
+<h3>Recommended Companion Nodes</h3>
+<p>For the most convenient experience, use PBC with:</p>
+<ul>
+<li><strong>KRuins Wildcard Batch</strong>, for processing wildcard references and prompt text.</li>
+<li><strong>KRuins Show Text</strong>, for displaying resolved prompt output.</li>
+</ul>
+<p>PBC can also work with compatible third-party wildcard text encoders and resolvers.</p>
+<h3>Free Wildcard Pack</h3>
+<p>A free KRuins wildcard starter pack is also available.</p>
+<p><strong>Free Wildcard Pack:</strong> https://kineticruins.com/downloads/KRuins-free-wilcards.zip</p>
+<p>Import the ZIP directly through PBC's Wild Cards tab to install the included wildcard files and folders.</p>
+<hr />
+<h1>8. TIPS AND BEST PRACTICES</h1>
+<p><strong>Organize wildcards by category.</strong> Use folders such as appearance, clothing, environments, and photography to keep your library manageable.</p>
+<p><strong>Use descriptive preset names.</strong> Short names make your preset buttons easier to recognize.</p>
+<p><strong>Keep wildcard references consistent.</strong> When renaming folders, use Smart Rename to help update matching references.</p>
+<p><strong>Refresh after external changes.</strong> If you add or remove wildcard files outside PBC, click Refresh to update the displayed library.</p>
+<p><strong>Use the right Save button.</strong> In Edit Mode, use Save Changes for wildcard file edits and Save Prompt for prompt presets. The main Save button exits Edit Mode.</p>
+<p><strong>Back up important wildcard files.</strong> Before performing large renames or deletions, keep a backup of your wildcard directory.</p>
+<hr />
+<h1>9. WHY I CREATED PBC</h1>
+<p>The KRuins Prompt Building Companion was built around a simple idea:</p>
+<p><strong>Prompt creation should be creative, not a constant exercise in file management.</strong></p>
+<p>ComfyUI gives creators tremendous freedom, but working with large wildcard collections, complex prompts, and frequently reused text can become tedious.</p>
+<p>PBC brings these tools together in one place.</p>
+<p>Whether you're creating AI photography, cinematic images, character portraits, fantasy scenes, or AI video prompts, PBC is designed to help you spend less time managing files and more time creating.</p>
+<p>And it's completely free.</p>
+<hr />
+<h2>KRuins ComfyUI Node Suite</h2>
+<p>Explore more free nodes, workflows, wildcard packs, and illustrated guides from KRuins.</p>
+<p><strong>Website:</strong> <a href="https://kineticruins.com">https://kineticruins.com</a></p>
+<p><strong>GitHub:</strong> <a href="https://github.com/Rampart187/KRuins-ComfyUI-Node-Suite">https://github.com/Rampart187/KRuins-ComfyUI-Node-Suite</a></p>
+<p><strong>Civitai:</strong> <a href="https://civitai.red/user/KRuins">https://civitai.red/user/KRuins</a></p>
+<p>If you find PBC useful, consider leaving feedback, sharing your workflow, or suggesting features for future updates.</p>
+<p>Your feedback helps shape the next generation of KRuins tools.</p>
+<hr />
+<h1>RENDER BEYOND IMAGINATION</h1>
+<p><strong>KRuins ComfyUI Node Suite</strong></p>
+<p><em>Better Prompts. Better Workflows. More Creative Freedom.</em></p>
+<section id="screenshots"><h2>All 50 PBC Screenshots</h2><p>Complete numbered visual walkthrough from the tested PBC development and release.</p><h3>Keywords and target controls (Screenshots 1–10)</h3><div class="shot-grid"><figure><a href="../screenshots/pbc/1.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/1.png" alt="KRuins PBC screenshot 1"></a><figcaption>Screenshot 1</figcaption></figure><figure><a href="../screenshots/pbc/2.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/2.png" alt="KRuins PBC screenshot 2"></a><figcaption>Screenshot 2</figcaption></figure><figure><a href="../screenshots/pbc/3.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/3.png" alt="KRuins PBC screenshot 3"></a><figcaption>Screenshot 3</figcaption></figure><figure><a href="../screenshots/pbc/4.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/4.png" alt="KRuins PBC screenshot 4"></a><figcaption>Screenshot 4</figcaption></figure><figure><a href="../screenshots/pbc/5.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/5.png" alt="KRuins PBC screenshot 5"></a><figcaption>Screenshot 5</figcaption></figure><figure><a href="../screenshots/pbc/6.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/6.png" alt="KRuins PBC screenshot 6"></a><figcaption>Screenshot 6</figcaption></figure><figure><a href="../screenshots/pbc/7.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/7.png" alt="KRuins PBC screenshot 7"></a><figcaption>Screenshot 7</figcaption></figure><figure><a href="../screenshots/pbc/8.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/8.png" alt="KRuins PBC screenshot 8"></a><figcaption>Screenshot 8</figcaption></figure><figure><a href="../screenshots/pbc/9.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/9.png" alt="KRuins PBC screenshot 9"></a><figcaption>Screenshot 9</figcaption></figure><figure><a href="../screenshots/pbc/10.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/10.png" alt="KRuins PBC screenshot 10"></a><figcaption>Screenshot 10</figcaption></figure></div><h3>Wildcard browsing and management (Screenshots 11–24)</h3><div class="shot-grid"><figure><a href="../screenshots/pbc/11.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/11.png" alt="KRuins PBC screenshot 11"></a><figcaption>Screenshot 11</figcaption></figure><figure><a href="../screenshots/pbc/12.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/12.png" alt="KRuins PBC screenshot 12"></a><figcaption>Screenshot 12</figcaption></figure><figure><a href="../screenshots/pbc/13.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/13.png" alt="KRuins PBC screenshot 13"></a><figcaption>Screenshot 13</figcaption></figure><figure><a href="../screenshots/pbc/14.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/14.png" alt="KRuins PBC screenshot 14"></a><figcaption>Screenshot 14</figcaption></figure><figure><a href="../screenshots/pbc/15.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/15.png" alt="KRuins PBC screenshot 15"></a><figcaption>Screenshot 15</figcaption></figure><figure><a href="../screenshots/pbc/16.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/16.png" alt="KRuins PBC screenshot 16"></a><figcaption>Screenshot 16</figcaption></figure><figure><a href="../screenshots/pbc/17.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/17.png" alt="KRuins PBC screenshot 17"></a><figcaption>Screenshot 17</figcaption></figure><figure><a href="../screenshots/pbc/18.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/18.png" alt="KRuins PBC screenshot 18"></a><figcaption>Screenshot 18</figcaption></figure><figure><a href="../screenshots/pbc/19.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/19.png" alt="KRuins PBC screenshot 19"></a><figcaption>Screenshot 19</figcaption></figure><figure><a href="../screenshots/pbc/20.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/20.png" alt="KRuins PBC screenshot 20"></a><figcaption>Screenshot 20</figcaption></figure><figure><a href="../screenshots/pbc/21.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/21.png" alt="KRuins PBC screenshot 21"></a><figcaption>Screenshot 21</figcaption></figure><figure><a href="../screenshots/pbc/22.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/22.png" alt="KRuins PBC screenshot 22"></a><figcaption>Screenshot 22</figcaption></figure><figure><a href="../screenshots/pbc/23.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/23.png" alt="KRuins PBC screenshot 23"></a><figcaption>Screenshot 23</figcaption></figure><figure><a href="../screenshots/pbc/24.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/24.png" alt="KRuins PBC screenshot 24"></a><figcaption>Screenshot 24</figcaption></figure></div><h3>TXT importing and directory management (Screenshots 25–38)</h3><div class="shot-grid"><figure><a href="../screenshots/pbc/25.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/25.png" alt="KRuins PBC screenshot 25"></a><figcaption>Screenshot 25</figcaption></figure><figure><a href="../screenshots/pbc/26.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/26.png" alt="KRuins PBC screenshot 26"></a><figcaption>Screenshot 26</figcaption></figure><figure><a href="../screenshots/pbc/27.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/27.png" alt="KRuins PBC screenshot 27"></a><figcaption>Screenshot 27</figcaption></figure><figure><a href="../screenshots/pbc/28.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/28.png" alt="KRuins PBC screenshot 28"></a><figcaption>Screenshot 28</figcaption></figure><figure><a href="../screenshots/pbc/29.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/29.png" alt="KRuins PBC screenshot 29"></a><figcaption>Screenshot 29</figcaption></figure><figure><a href="../screenshots/pbc/30.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/30.png" alt="KRuins PBC screenshot 30"></a><figcaption>Screenshot 30</figcaption></figure><figure><a href="../screenshots/pbc/31.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/31.png" alt="KRuins PBC screenshot 31"></a><figcaption>Screenshot 31</figcaption></figure><figure><a href="../screenshots/pbc/32.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/32.png" alt="KRuins PBC screenshot 32"></a><figcaption>Screenshot 32</figcaption></figure><figure><a href="../screenshots/pbc/33.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/33.png" alt="KRuins PBC screenshot 33"></a><figcaption>Screenshot 33</figcaption></figure><figure><a href="../screenshots/pbc/34.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/34.png" alt="KRuins PBC screenshot 34"></a><figcaption>Screenshot 34</figcaption></figure><figure><a href="../screenshots/pbc/35.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/35.png" alt="KRuins PBC screenshot 35"></a><figcaption>Screenshot 35</figcaption></figure><figure><a href="../screenshots/pbc/36.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/36.png" alt="KRuins PBC screenshot 36"></a><figcaption>Screenshot 36</figcaption></figure><figure><a href="../screenshots/pbc/37.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/37.png" alt="KRuins PBC screenshot 37"></a><figcaption>Screenshot 37</figcaption></figure><figure><a href="../screenshots/pbc/38.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/38.png" alt="KRuins PBC screenshot 38"></a><figcaption>Screenshot 38</figcaption></figure></div><h3>Prompt presets and ZIP import (Screenshots 39–50)</h3><div class="shot-grid"><figure><a href="../screenshots/pbc/39.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/39.png" alt="KRuins PBC screenshot 39"></a><figcaption>Screenshot 39</figcaption></figure><figure><a href="../screenshots/pbc/40.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/40.png" alt="KRuins PBC screenshot 40"></a><figcaption>Screenshot 40</figcaption></figure><figure><a href="../screenshots/pbc/41.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/41.png" alt="KRuins PBC screenshot 41"></a><figcaption>Screenshot 41</figcaption></figure><figure><a href="../screenshots/pbc/42.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/42.png" alt="KRuins PBC screenshot 42"></a><figcaption>Screenshot 42</figcaption></figure><figure><a href="../screenshots/pbc/43.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/43.png" alt="KRuins PBC screenshot 43"></a><figcaption>Screenshot 43</figcaption></figure><figure><a href="../screenshots/pbc/44.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/44.png" alt="KRuins PBC screenshot 44"></a><figcaption>Screenshot 44</figcaption></figure><figure><a href="../screenshots/pbc/45.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/45.png" alt="KRuins PBC screenshot 45"></a><figcaption>Screenshot 45</figcaption></figure><figure><a href="../screenshots/pbc/46.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/46.png" alt="KRuins PBC screenshot 46"></a><figcaption>Screenshot 46</figcaption></figure><figure><a href="../screenshots/pbc/47.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/47.png" alt="KRuins PBC screenshot 47"></a><figcaption>Screenshot 47</figcaption></figure><figure><a href="../screenshots/pbc/48.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/48.png" alt="KRuins PBC screenshot 48"></a><figcaption>Screenshot 48</figcaption></figure><figure><a href="../screenshots/pbc/49.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/49.png" alt="KRuins PBC screenshot 49"></a><figcaption>Screenshot 49</figcaption></figure><figure><a href="../screenshots/pbc/50.png" target="_blank"><img loading="lazy" src="../screenshots/pbc/50.png" alt="KRuins PBC screenshot 50"></a><figcaption>Screenshot 50</figcaption></figure></div></section></main></body></html>
