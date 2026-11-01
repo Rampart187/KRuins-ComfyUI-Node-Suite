@@ -12,10 +12,17 @@ from .kr_render_eta import (
     NODE_CLASS_MAPPINGS as RENDER_ETA_NODES
 )
 
-from .kr_save_video import KRuinsSaveVideo
+# Save Video requires the newer ComfyUI V3 API.
+# Older ComfyUI installations can still load the other four nodes.
+try:
+    from .kr_save_video import KRuinsSaveVideo
+except (ImportError, AttributeError) as exc:
+    KRuinsSaveVideo = None
+    print(
+        f"[KRuins] Save Video unavailable: {exc}. "
+        "The other four nodes will remain available."
+    )
 
-
-# Register existing V1 nodes
 NODE_CLASS_MAPPINGS = {
     **WILDCARD_NODES,
     **SHOW_TEXT_NODES,
@@ -23,17 +30,15 @@ NODE_CLASS_MAPPINGS = {
     **RENDER_ETA_NODES,
 }
 
-# Register the V3 Save Video node
-# through the same mapping.
-NODE_CLASS_MAPPINGS["KRuinsSaveVideo"] = KRuinsSaveVideo
-
-
 NODE_DISPLAY_NAME_MAPPINGS = {
     "KRWildcardBatch": "KRuins - Wildcard Batch",
     "KRShowText": "KRuins - Show Text",
     "KRSaveImage": "KRuins - Save Image",
     "KRRenderETA": "KRuins - Render ETA",
-    "KRuinsSaveVideo": "KRuins - Save Video",
 }
+
+if KRuinsSaveVideo is not None:
+    NODE_CLASS_MAPPINGS["KRuinsSaveVideo"] = KRuinsSaveVideo
+    NODE_DISPLAY_NAME_MAPPINGS["KRuinsSaveVideo"] = "KRuins - Save Video"
 
 WEB_DIRECTORY = "./js"
